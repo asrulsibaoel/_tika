@@ -1,8 +1,8 @@
 <br>
 <?php
-$konek = mysqli_connect("localhost","root","","db_pegawai");
-$conecc = mysqli_connect("localhost","root","","db_pegawai");
-$conec = mysqli_connect("localhost","root","","db_pegawai");
+$konek = mysqli_connect("localhost","homestead","secret","db_pegawai");
+//$conecc = mysqli_connect("localhost","root","","db_pegawai");
+//$conec = mysqli_connect("localhost","root","","db_pegawai");
 ?>
         <div class="row">
             <div class="col-xs-14 col-md-9 col-lg-4">
@@ -39,11 +39,11 @@ $conec = mysqli_connect("localhost","root","","db_pegawai");
                                 <?php
                                 require_once "config.php";
                                 $sqlCommand = "SELECT COUNT(*) FROM tb_pensiun"; 
-                                $query = mysqli_query($conecc, $sqlCommand) or die (mysqli_error()); 
+                                $query = mysqli_query($konek, $sqlCommand) or die (mysqli_error()); 
                                 $row = mysqli_fetch_row($query);
                                 echo $row[0] . " Pensiun";
                                 mysqli_free_result($query); 
-                                mysqli_close($conecc);
+                                mysqli_close($konek);
                                 ?>
                             </div>
                             <div class="text-muted"><a href="<?php echo base_url();?>index.php/laporan_pensiun"><h5> => Data Pensiun</h5></a></div>
@@ -62,11 +62,11 @@ $conec = mysqli_connect("localhost","root","","db_pegawai");
                                 <?php
                                 require_once "config.php";
                                 $sqlCommand = "SELECT COUNT(*) FROM tb_cuti"; 
-                                $query = mysqli_query($conec, $sqlCommand) or die (mysqli_error()); 
+                                $query = mysqli_query($konek, $sqlCommand) or die (mysqli_error()); 
                                 $row = mysqli_fetch_row($query);
                                 echo $row[0] . " Cuti";
                                 mysqli_free_result($query); 
-                                mysqli_close($conec);
+                                mysqli_close($konek);
                                 ?>
                             </div>
                             <div class="text-muted"><a href="<?php echo base_url();?>index.php/cuti"><h5> => Data Cuti</h5></a></div>

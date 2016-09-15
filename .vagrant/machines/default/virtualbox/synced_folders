@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/tika":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/tika","hostpath":"/Users/asrulsibaoel/Downloads/tika","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/asrulsibaoel/Downloads/tika","disabled":false,"__vagrantfile":true}}}

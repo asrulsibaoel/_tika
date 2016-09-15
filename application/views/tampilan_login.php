@@ -6,7 +6,7 @@
 <title>Log In</title>
 
 <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php echo base_url();?>css/datepicker3.css" rel="stylesheet">
+<link href="<?php echo base_url();?>css/datepicker.css" rel="stylesheet">
 <link href="<?php echo base_url();?>css/styles.css" rel="stylesheet">
 </head>
 
@@ -54,8 +54,9 @@
 	<script src="<?php echo base_url();?>js/chart.min.js"></script>
 	<script src="<?php echo base_url();?>js/chart-data.js"></script>
 	<script src="<?php echo base_url();?>js/easypiechart.js"></script>
+        <script src="<?php echo base_url();?>js/bootstrap-datepicker.js"></script>
 	<script src="<?php echo base_url();?>js/easypiechart-data.js"></script>
-	<script src="<?php echo base_url();?>js/bootstrap-datepicker.js"></script>
+	
 </body>
 
 </html>

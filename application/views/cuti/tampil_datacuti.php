@@ -163,13 +163,13 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-4" for="tanggal_mulai">Tanggal Mulai</label>
                                             <div class="col-sm-6">
-                                            <input required type="text" class="form-control" id="tanggal_mulai" name="tanggal_mulai" value="<?php echo $row->tanggal_mulai ;?>" >
+                                            <input required type="text" class="form-control tanggal_selesai" id="tanggal_mulai" name="tanggal_mulai" value="<?php echo $row->tanggal_mulai ;?>" >
                                             </div><br><br>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-4" for="tanggal_selesai">Tanggal Selesai</label>
                                             <div class="col-sm-6">
-                                            <input required type="text" class="form-control" id="tanggal_selesai" name="tanggal_selesai" value="<?php echo $row->tanggal_selesai ;?>" >
+                                            <input required type="text" class="form-control tanggal_selesai" id="tanggal_selesai" name="tanggal_selesai" value="<?php echo $row->tanggal_selesai ;?>" >
                                             </div><br><br>
                                         </div>
                                         <div class="form-group">
@@ -203,4 +203,27 @@ function confirm_modal(delete_url)
 	$('#modal_delete').modal('show', {backdrop: 'static'});
 	document.getElementById('delete_link').setAttribute('href' , delete_url);
 }
+
+//inisialisasi date picker ke input element
+$('.tanggal_selesai').datepicker({
+//    format: 'yyyy-mm-dd',
+    beforeShow: function() {
+        setTimeout(function(){
+            $('.datepicker').css({
+                'position' : 'relative',
+                'z-index' : 99999999
+            });
+        }, 0);
+    }
+});
+
+//menampilkan date picker
+$('.tanggal_selesai').datepicker('show');
+
+//event trigger 'change' untuk tag html / element yang telah terinisialisasi
+$('body').on('change', '#tanggal_mulai, #tanggal_selesai', function(){
+//    alert('hellyeah');
+//code cari selisih tanggalnya d sini
+// tutorialnya : http://pangeran-it.blogspot.co.id/2014/02/mencari-selisih-tanggal-dengan-fungsi.html
+});
 </script>
